@@ -6,8 +6,10 @@ public class MovimientoEnemigo : MonoBehaviour
     public List<Transform> waypoints; // Lista de waypoints
     public float velocidad = 3.0f; // Velocidad de movimiento del monstruo
     public float velocidadRotacion = 5.0f; // Velocidad de rotación del monstruo
+    public int vida = 100; // Vida del zombie
     private int puntoActual = 0; // Índice del waypoint actual
     private Animator animator; // Referencia al Animator del monstruo
+    private bool estaMuerto = false; // Indica si el zombie está muerto
 
     void Start()
     {
@@ -23,45 +25,47 @@ public class MovimientoEnemigo : MonoBehaviour
 
     void Update()
     {
-        // Si el monstruo aún no ha llegado al último waypoint
+        if (estaMuerto) return; // Si está muerto, no hacer nada más
+
+        // Movimiento hacia el waypoint
         if (puntoActual < waypoints.Count)
         {
-            // Obtén la posición del siguiente waypoint
             Transform objetivo = waypoints[puntoActual];
             Vector3 direccion = objetivo.position - transform.position;
-
-            // Calcula la rotación que mira hacia el siguiente waypoint
             Quaternion rotacionObjetivo = Quaternion.LookRotation(direccion);
 
-            // Gira el monstruo suavemente hacia el siguiente waypoint
             transform.rotation = Quaternion.Slerp(transform.rotation, rotacionObjetivo, velocidadRotacion * Time.deltaTime);
-
-            // Mueve el monstruo hacia el siguiente waypoint
             transform.position += direccion.normalized * velocidad * Time.deltaTime;
 
-            // Verificar si ha llegado al waypoint actual
             if (direccion.magnitude < 0.1f)
             {
-                puntoActual++; // Pasar al siguiente waypoint
+                puntoActual++;
             }
         }
         else
         {
-            // Al llegar al final, activar animación de "Morir" o cualquier otra acción
-            animator.SetTrigger("Morir");  // Aquí activamos la animación de morir
             LlegarAlFinal();
         }
     }
 
     void LlegarAlFinal()
     {
-        // Opcional: Acción a realizar cuando el monstruo llega al final del camino
-        Destroy(gameObject); // Destruye al monstruo al llegar al final
+        estaMuerto = true;
+        animator.SetTrigger("Morir");
+        Destroy(gameObject, 2f); // Destruye el zombie 2 segundos después
     }
 
-    // Función que puedes llamar cuando el monstruo necesite atacar
-    public void Atacar()
+    public void RecibirDaño(int cantidad)
     {
-        animator.SetTrigger("Atacar");  // Activar la animación de ataque
+        if (estaMuerto) return; // No hacer nada si ya está muerto
+
+        vida -= cantidad;
+
+        if (vida <= 0)
+        {
+            estaMuerto = true;
+            animator.SetTrigger("Morir"); // Activar la animación de muerte
+            Destroy(gameObject, 2f); // Destruye el zombie después de 2 segundos
+        }
     }
 }

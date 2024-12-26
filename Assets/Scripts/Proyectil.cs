@@ -3,6 +3,7 @@ using UnityEngine;
 public class Proyectil : MonoBehaviour
 {
     public float velocidad = 20f; // Velocidad de la bala
+    public int daño = 20; // Daño que inflige la bala
 
     void Update()
     {
@@ -15,6 +16,15 @@ public class Proyectil : MonoBehaviour
         // Verificar si impacta con un enemigo
         if (other.CompareTag("Enemigo"))
         {
+            // Obtener el componente MovimientoEnemigo del enemigo
+            MovimientoEnemigo enemigo = other.GetComponent<MovimientoEnemigo>();
+
+            if (enemigo != null)
+            {
+                // Aplicar daño al enemigo
+                enemigo.RecibirDaño(daño);
+            }
+
             // Mostrar un mensaje en la consola
             Debug.Log("La bala ha impactado con un enemigo.");
 
