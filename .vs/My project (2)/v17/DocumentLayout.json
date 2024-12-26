@@ -1,0 +1,109 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\malco\\My project (2)\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{D0F74257-F6B2-DCEA-FC51-AA11C694D4B0}|Assembly-CSharp.csproj|c:\\users\\malco\\my project (2)\\assets\\scripts\\defense.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D0F74257-F6B2-DCEA-FC51-AA11C694D4B0}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\defense.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D0F74257-F6B2-DCEA-FC51-AA11C694D4B0}|Assembly-CSharp.csproj|c:\\users\\malco\\my project (2)\\assets\\scripts\\zombiemovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D0F74257-F6B2-DCEA-FC51-AA11C694D4B0}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\zombiemovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D0F74257-F6B2-DCEA-FC51-AA11C694D4B0}|Assembly-CSharp.csproj|C:\\Users\\malco\\My project (2)\\assets\\scripts\\monstergenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D0F74257-F6B2-DCEA-FC51-AA11C694D4B0}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\monstergenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D0F74257-F6B2-DCEA-FC51-AA11C694D4B0}|Assembly-CSharp.csproj|C:\\Users\\malco\\My project (2)\\assets\\scripts\\controlador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D0F74257-F6B2-DCEA-FC51-AA11C694D4B0}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\controlador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D0F74257-F6B2-DCEA-FC51-AA11C694D4B0}|Assembly-CSharp.csproj|C:\\Users\\malco\\My project (2)\\assets\\scripts\\proyectil.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D0F74257-F6B2-DCEA-FC51-AA11C694D4B0}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\proyectil.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ZombieMovement.cs",
+              "DocumentMoniker": "C:\\Users\\malco\\My project (2)\\Assets\\Scripts\\ZombieMovement.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\ZombieMovement.cs",
+              "ToolTip": "C:\\Users\\malco\\My project (2)\\Assets\\Scripts\\ZombieMovement.cs",
+              "RelativeToolTip": "Assets\\Scripts\\ZombieMovement.cs",
+              "ViewState": "AgIAACQAAAAAAAAAAAAYwDQAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-29T15:35:45.905Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "controlador.cs",
+              "DocumentMoniker": "C:\\Users\\malco\\My project (2)\\Assets\\Scripts\\controlador.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\controlador.cs",
+              "ToolTip": "C:\\Users\\malco\\My project (2)\\Assets\\Scripts\\controlador.cs",
+              "RelativeToolTip": "Assets\\Scripts\\controlador.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-22T16:52:16.014Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MonsterGenerator.cs",
+              "DocumentMoniker": "C:\\Users\\malco\\My project (2)\\Assets\\Scripts\\MonsterGenerator.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\MonsterGenerator.cs",
+              "ToolTip": "C:\\Users\\malco\\My project (2)\\Assets\\Scripts\\MonsterGenerator.cs",
+              "RelativeToolTip": "Assets\\Scripts\\MonsterGenerator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-22T16:42:25.957Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Proyectil.cs",
+              "DocumentMoniker": "C:\\Users\\malco\\My project (2)\\Assets\\Scripts\\Proyectil.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Proyectil.cs",
+              "ToolTip": "C:\\Users\\malco\\My project (2)\\Assets\\Scripts\\Proyectil.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Proyectil.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAABXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-18T18:47:10.998Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Defense.cs",
+              "DocumentMoniker": "C:\\Users\\malco\\My project (2)\\Assets\\Scripts\\Defense.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Defense.cs",
+              "ToolTip": "C:\\Users\\malco\\My project (2)\\Assets\\Scripts\\Defense.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Defense.cs",
+              "ViewState": "AgIAADIAAAAAAAAAAAAgwD8AAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-18T18:46:40.061Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
