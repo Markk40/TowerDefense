@@ -8,6 +8,8 @@ TagManager:
   - Proyectil
   - Torreta
   - Bala
+  - Path
+  - Map
   layers:
   - Default
   - TransparentFX

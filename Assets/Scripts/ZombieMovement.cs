@@ -10,6 +10,7 @@ public class MovimientoEnemigo : MonoBehaviour
     private int puntoActual = 0; // Índice del waypoint actual
     private Animator animator; // Referencia al Animator del monstruo
     private bool estaMuerto = false; // Indica si el zombie está muerto
+    private const int deadPoints = 10;
 
     void Start()
     {
@@ -65,6 +66,7 @@ public class MovimientoEnemigo : MonoBehaviour
         {
             estaMuerto = true;
             animator.SetTrigger("Morir"); // Activar la animación de muerte
+            ScoreManager.Instance.AddPoints(deadPoints);
             Destroy(gameObject, 2f); // Destruye el zombie después de 2 segundos
         }
     }
