@@ -11,6 +11,13 @@ public class Torreta : MonoBehaviour
     private float temporizadorDisparo = 0f;
     private bool dispararDesdeCanon1 = true; // Controla desde qué cañón se dispara
     private List<GameObject> enemigosEnRango = new List<GameObject>(); // Lista de enemigos dentro del rango
+    private Animator animator; // Referencia al componente Animator
+
+    void Start()
+    {
+        // Obtén la referencia al Animator
+        animator = GetComponent<Animator>();
+    }
 
     void Update()
     {
@@ -29,6 +36,20 @@ public class Torreta : MonoBehaviour
             {
                 Disparar(enemigoMasCercano.transform);
                 temporizadorDisparo = 0f;
+
+                // Activar la animación de disparo
+                if (animator != null)
+                {
+                    animator.SetBool("isShooting", true); // Cambia este nombre por el parámetro que uses en el Animator
+                }
+            }
+        }
+        else
+        {
+            // Desactivar la animación de disparo si no hay enemigos
+            if (animator != null)
+            {
+                animator.SetBool("isShooting", false);
             }
         }
     }

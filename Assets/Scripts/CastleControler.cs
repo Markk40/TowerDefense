@@ -1,15 +1,20 @@
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 using UnityEngine.SceneManagement; // Para reiniciar o cargar la escena de fin del juego
 
 public class Castillo : MonoBehaviour
 {
     public int vidaMaxima = 100; // Vida total del castillo
     private int vidaActual; // Vida actual del castillo
+    public Image healthBarFill;
+    public TextMeshProUGUI healthText;
 
     void Start()
     {
         // Inicializamos la vida del castillo
         vidaActual = vidaMaxima;
+        UpdateHealthBar();
     }
 
     void OnTriggerEnter(Collider other)
@@ -31,6 +36,7 @@ public class Castillo : MonoBehaviour
     public void RecibirDanio(int cantidad)
     {
         vidaActual -= cantidad;
+        UpdateHealthBar();
 
         // Asegúrate de que la vida no sea negativa
         if (vidaActual <= 0)
@@ -39,8 +45,17 @@ public class Castillo : MonoBehaviour
             FinDelJuego(); // Llama a la función de fin del juego
         }
 
-        // Mostrar la vida del castillo en la consola (opcional)
-        Debug.Log("Vida del castillo: " + vidaActual);
+    }
+    void UpdateHealthBar()
+    {
+        if (healthBarFill != null)
+        {
+            healthBarFill.fillAmount = (float)vidaActual / vidaMaxima; ;
+        }
+        if (healthText != null)
+        {
+            healthText.text = $"{vidaActual} / {vidaMaxima}";
+        }
     }
 
     void FinDelJuego()

@@ -19,13 +19,13 @@ public class EstadoObjeto : MonoBehaviour
         {
             if (!estabaDestruido)
             {
-                Debug.Log($"El objeto {objetoASupervisar} ha sido destruido.");
+                //Debug.Log($"El objeto {objetoASupervisar} ha sido destruido.");
                 estabaDestruido = true;
             }
         }
         else
         {
-            Debug.Log($"El objeto {objetoASupervisar.name} sigue existiendo.");
+            //Debug.Log($"El objeto {objetoASupervisar.name} sigue existiendo.");
             estabaDestruido = false;
         }
     }
