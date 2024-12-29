@@ -26,12 +26,11 @@ public class ControladorTorretas : MonoBehaviour
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         if (Physics.Raycast(ray, out RaycastHit hit))
         {
-            // Verificar si el punto pertenece al Path
             if (hit.collider.CompareTag("Path"))
             {
+                // No permite colocar torretas en el path
                 Debug.Log("No puedes colocar una torreta sobre el camino.");
-                modoColocar = false; // Salir del modo colocar
-                return;
+                return; // No salir del modo colocar aún
             }
             else if (hit.collider.CompareTag("Map"))
             {
@@ -40,15 +39,20 @@ public class ControladorTorretas : MonoBehaviour
                 {
                     Instantiate(prefabTorreta, hit.point, Quaternion.identity);
                     Debug.Log("Torreta colocada en: " + hit.point);
+
+                    // Salir del modo colocar tras colocar la torreta correctamente
+                    modoColocar = false;
                 }
                 else
                 {
                     Debug.Log("No tienes suficientes puntos para colocar una torreta.");
                 }
             }
-            // Salir del modo colocar
-            modoColocar = false;
+        }
+        else
+        {
+            Debug.Log("Haz clic en un área válida del mapa.");
         }
     }
-
 }
+
