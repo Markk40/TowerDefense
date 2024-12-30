@@ -26,29 +26,63 @@ public class ControladorTorretas : MonoBehaviour
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         if (Physics.Raycast(ray, out RaycastHit hit))
         {
-            // Verificar si el punto pertenece al Path
-            if (hit.collider.CompareTag("Path"))
+            // Crear un nuevo punto con la coordenada Y especificada
+            Vector3 posicionAjustada = new Vector3(hit.point.x, yCoord, hit.point.z);
+
+            // Obtener el BoxCollider del prefab para usarlo en las verificaciones
+            BoxCollider torretaCollider = prefabTorreta.GetComponent<BoxCollider>();
+            if (torretaCollider == null)
+            {
+                Debug.LogError("El prefab de la torreta no tiene un BoxCollider.");
+                return;
+            }
+
+            // Calcular las dimensiones del área de verificación basadas en el tamaño mundial del BoxCollider
+            Vector3 colliderSize = new Vector3(
+                torretaCollider.size.x * prefabTorreta.transform.localScale.x,
+                torretaCollider.size.y * prefabTorreta.transform.localScale.y,
+                torretaCollider.size.z * prefabTorreta.transform.localScale.z
+            );
+            Vector3 halfExtents = colliderSize / 2f;
+
+            // Verificar si el área de colocación colisiona con el Path
+            Collider[] collidersInPath = Physics.OverlapBox(posicionAjustada, halfExtents, Quaternion.identity, LayerMask.GetMask("Path"));
+            if (collidersInPath.Length > 0)
             {
                 Debug.Log("No puedes colocar una torreta sobre el camino.");
                 modoColocar = false; // Salir del modo colocar
                 return;
             }
-            else if (hit.collider.CompareTag("Map"))
+
+            // Verificar si el área de colocación colisiona con otras torretas
+            Collider[] collidersInTorreta = Physics.OverlapBox(posicionAjustada, halfExtents, Quaternion.identity, LayerMask.GetMask("Torreta"));
+            if (collidersInTorreta.Length > 0)
             {
-                // Verificar si hay suficientes puntos antes de colocar la torreta
-                if (ScoreManager.Instance.SpendPoints(costoTorreta))
-                {
-                    Instantiate(prefabTorreta, hit.point, Quaternion.identity);
-                    Debug.Log("Torreta colocada en: " + hit.point);
-                }
-                else
-                {
-                    Debug.Log("No tienes suficientes puntos para colocar una torreta.");
-                }
+                Debug.Log("No puedes colocar una torreta aquí, ya hay otra torreta.");
+                modoColocar = false; // Salir del modo colocar
+                return;
             }
+
+            // Verificar si hay suficientes puntos antes de colocar la torreta
+            if (ScoreManager.Instance.SpendPoints(costoTorreta))
+            {
+                Instantiate(prefabTorreta, posicionAjustada, Quaternion.identity);
+                Debug.Log("Torreta colocada en: " + posicionAjustada);
+            }
+            else
+            {
+                Debug.Log("No tienes suficientes puntos para colocar una torreta.");
+            }
+
             // Salir del modo colocar
             modoColocar = false;
         }
     }
+
+
+
+
+
+
 
 }

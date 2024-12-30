@@ -26,7 +26,7 @@ public class Proyectil : MonoBehaviour
             }
 
             // Mostrar un mensaje en la consola
-            Debug.Log("La bala ha impactado con un enemigo.");
+            //Debug.Log("La bala ha impactado con un enemigo.");
 
             // Destruir la bala después del impacto
             Destroy(gameObject);
