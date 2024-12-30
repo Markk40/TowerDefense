@@ -26,6 +26,7 @@ public class ControladorTorretas : MonoBehaviour
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         if (Physics.Raycast(ray, out RaycastHit hit))
         {
+<<<<<<< HEAD
             // Crear un nuevo punto con la coordenada Y especificada
             Vector3 posicionAjustada = new Vector3(hit.point.x, yCoord, hit.point.z);
 
@@ -48,16 +49,20 @@ public class ControladorTorretas : MonoBehaviour
             // Verificar si el área de colocación colisiona con el Path
             Collider[] collidersInPath = Physics.OverlapBox(posicionAjustada, halfExtents, Quaternion.identity, LayerMask.GetMask("Path"));
             if (collidersInPath.Length > 0)
+=======
+            if (hit.collider.CompareTag("Path"))
+>>>>>>> f849c87a0ade9035cb5e84d55712b45b91a71902
             {
+                // No permite colocar torretas en el path
                 Debug.Log("No puedes colocar una torreta sobre el camino.");
-                modoColocar = false; // Salir del modo colocar
-                return;
+                return; // No salir del modo colocar aún
             }
 
             // Verificar si el área de colocación colisiona con otras torretas
             Collider[] collidersInTorreta = Physics.OverlapBox(posicionAjustada, halfExtents, Quaternion.identity, LayerMask.GetMask("Torreta"));
             if (collidersInTorreta.Length > 0)
             {
+<<<<<<< HEAD
                 Debug.Log("No puedes colocar una torreta aquí, ya hay otra torreta.");
                 modoColocar = false; // Salir del modo colocar
                 return;
@@ -85,4 +90,27 @@ public class ControladorTorretas : MonoBehaviour
 
 
 
+=======
+                // Verificar si hay suficientes puntos antes de colocar la torreta
+                if (ScoreManager.Instance.SpendPoints(costoTorreta))
+                {
+                    Instantiate(prefabTorreta, hit.point, Quaternion.identity);
+                    Debug.Log("Torreta colocada en: " + hit.point);
+
+                    // Salir del modo colocar tras colocar la torreta correctamente
+                    modoColocar = false;
+                }
+                else
+                {
+                    Debug.Log("No tienes suficientes puntos para colocar una torreta.");
+                }
+            }
+        }
+        else
+        {
+            Debug.Log("Haz clic en un área válida del mapa.");
+        }
+    }
+>>>>>>> f849c87a0ade9035cb5e84d55712b45b91a71902
 }
+
