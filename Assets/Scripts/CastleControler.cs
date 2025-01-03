@@ -63,6 +63,6 @@ public class Castillo : MonoBehaviour
         Debug.Log("¡El castillo ha caído! Fin del juego.");
 
         // Puedes cargar una escena de "Game Over"
-        SceneManager.LoadScene("GameOver");
+        SceneManager.LoadScene("GameOverScene");
     }
 }
