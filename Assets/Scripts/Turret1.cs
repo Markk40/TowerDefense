@@ -5,11 +5,7 @@ public class Torreta1 : TorretaBase
     public Transform canon1; // Posición del cañón 1
     public Transform canon2; // Posición del cañón 2
     private bool dispararDesdeCanon1 = true; // Controla desde qué cañón se dispara
-
-    private void Start()
-    {
-        NivelTorreta = 1;
-    }
+    //private int nivelTorreta = 1;
     protected override void Disparar(Transform objetivo)
     {
         Vector3 direccion = (objetivo.position - transform.position).normalized;

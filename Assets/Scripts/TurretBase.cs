@@ -13,6 +13,7 @@ public abstract class TorretaBase : MonoBehaviour
     void Start()
     {
         animator = GetComponent<Animator>(); // Inicializa el Animator
+        animator.SetBool("isShooting", false);
     }
 
     void Update()
@@ -30,24 +31,19 @@ public abstract class TorretaBase : MonoBehaviour
             // Disparar si es el momento adecuado
             if (temporizadorDisparo >= tiempoEntreDisparos)
             {
-                Disparar(enemigoMasCercano.transform);
-                temporizadorDisparo = 0f;
-
-                // Activar la animación de disparo
-                if (animator != null && NivelTorreta == 1)
+                if (animator != null)
                 {
-                    animator.SetBool("isShooting", true); // Cambia este nombre por el parámetro que uses en el Animator
+                    // Activar la animación de disparo
+                    animator.SetTrigger("Shoot");
                 }
-            }
-        }
-        else
-        {
-            if (animator != null && NivelTorreta == 1)
-            {
-                animator.SetBool("isShooting", false);
+                
+                Disparar(enemigoMasCercano.transform);
+
+                temporizadorDisparo = 0f;
             }
         }
     }
+
 
     void OnTriggerEnter(Collider other)
     {

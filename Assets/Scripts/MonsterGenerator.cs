@@ -2,13 +2,13 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
-public class SpawnerDeEnemigos : MonoBehaviour
+public class MonsterGenerator : MonoBehaviour
 {
     public GameObject prefabZombieBase; // Prefab de zombie que actúa como base (debe estar desactivado en la escena)
     public List<Transform> waypoints; // Lista de waypoints
     public float intervalo = 2.0f; // Intervalo inicial de tiempo entre cada monstruo
     public float intervaloMinimo = 0.5f; // Intervalo mínimo que puede llegar a tener
-    public int enemigosPorAumento = 5; // Cada cuantos enemigos generados se aumenta la dificultad
+    public int enemigosPorAumento = 15; // Cada cuantos enemigos generados se aumenta la dificultad
 
     private GameObject zombieBaseClone; // Clonaremos este zombie base
     private int enemigosGenerados = 0; // Contador de enemigos generados
@@ -52,7 +52,7 @@ public class SpawnerDeEnemigos : MonoBehaviour
     {
         if (intervalo > intervaloMinimo)
         {
-            intervalo -= 0.1f; // Reducir el intervalo en 0.1 segundos
+            intervalo -= 0.5f; // Reducir el intervalo en 0.1 segundos
             intervalo = Mathf.Max(intervalo, intervaloMinimo); // Asegurarse de que el intervalo no sea menor que el mínimo
         }
     }
