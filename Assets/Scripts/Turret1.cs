@@ -9,6 +9,7 @@ public class Torreta1 : TorretaBase
     private void Start()
     {
         NivelTorreta = 1;
+        animator = GetComponent<Animator>(); // Inicializa el Animator
     }
     protected override void Disparar(Transform objetivo)
     {

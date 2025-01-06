@@ -73,7 +73,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefabBala: {fileID: 803161919115116531, guid: 748618dd7103dd5408cc686b971d9828,
     type: 3}
-  tiempoEntreDisparos: 0.8
+  tiempoEntreDisparos: 1
   puntoDisparo: {fileID: 4609339636147398653}
 --- !u!135 &2535571413109269064
 SphereCollider:

@@ -10,7 +10,7 @@ public class MovimientoEnemigo : MonoBehaviour
     private int puntoActual = 0; // Índice del waypoint actual
     private Animator animator; // Referencia al Animator del monstruo
     private bool estaMuerto = false; // Indica si el zombie está muerto
-    private const int deadPoints = 10;
+    private const int deadPoints = 5;
 
     void Start()
     {

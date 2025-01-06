@@ -4,20 +4,18 @@ using System.Collections.Generic;
 
 public class SpawnerDeEnemigos : MonoBehaviour
 {
-    public GameObject prefabZombieBase; // Prefab de zombie que actúa como base (debe estar desactivado en la escena)
+    public GameObject prefabZombieBase; // Prefab de zombie normal
+    public GameObject prefabZombieNivel2; // Prefab de zombie nivel 2
     public List<Transform> waypoints; // Lista de waypoints
     public float intervalo = 2.0f; // Intervalo inicial de tiempo entre cada monstruo
     public float intervaloMinimo = 0.5f; // Intervalo mínimo que puede llegar a tener
     public int enemigosPorAumento = 5; // Cada cuantos enemigos generados se aumenta la dificultad
 
-    private GameObject zombieBaseClone; // Clonaremos este zombie base
     private int enemigosGenerados = 0; // Contador de enemigos generados
+    private System.Random random = new System.Random(); // Generador de números aleatorios
 
     void Start()
     {
-        // Clonar el zombie base solo una vez y desactivarlo
-        zombieBaseClone = Instantiate(prefabZombieBase, transform.position, Quaternion.identity);
-        zombieBaseClone.SetActive(false); // Este zombie no debe aparecer en la escena, solo se usa para clonación
         StartCoroutine(GenerarEnemigos());
     }
 
@@ -25,29 +23,43 @@ public class SpawnerDeEnemigos : MonoBehaviour
     {
         while (true)
         {
-            // Clonamos el zombie base para generar un nuevo enemigo
-            GameObject enemigoClonado = Instantiate(zombieBaseClone, waypoints[0].position, Quaternion.identity);
-            enemigoClonado.SetActive(true); // Activamos el clon para que sea visible e interactúe
+            GameObject enemigoClonado;
 
-            // Pasa los waypoints al script del enemigo
+            // Decidir qué tipo de enemigo generar
+            if (enemigosGenerados >= 75)
+            {
+                enemigoClonado = Instantiate(prefabZombieNivel2, waypoints[0].position, Quaternion.identity);
+            }
+            else if (enemigosGenerados >= 15 && random.Next(100) < 40)
+            {
+                // 40% de probabilidad de generar un zombie de nivel 2
+                enemigoClonado = Instantiate(prefabZombieNivel2, waypoints[0].position, Quaternion.identity);
+            }
+            else
+            {
+                // Generar un zombie normal
+                enemigoClonado = Instantiate(prefabZombieBase, waypoints[0].position, Quaternion.identity);
+            }
+
+            // Activar el enemigo y configurar sus waypoints
+            enemigoClonado.SetActive(true);
             MovimientoEnemigo scriptEnemigo = enemigoClonado.GetComponent<MovimientoEnemigo>();
             scriptEnemigo.waypoints = waypoints;
 
-            // Incrementamos el contador de enemigos generados
+            // Incrementar el contador de enemigos generados
             enemigosGenerados++;
 
-            // Cada cierto número de enemigos generados, reducimos el intervalo entre generaciones
+            // Reducir dificultad cada cierto número de enemigos
             if (enemigosGenerados % enemigosPorAumento == 0)
             {
                 ReducirDificultad();
             }
 
-            // Espera antes de generar el siguiente enemigo
+            // Esperar antes de generar el siguiente enemigo
             yield return new WaitForSeconds(intervalo);
         }
     }
 
-    // Función que reduce el intervalo entre enemigos, hasta un mínimo
     void ReducirDificultad()
     {
         if (intervalo > intervaloMinimo)
