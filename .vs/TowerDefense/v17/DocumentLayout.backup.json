@@ -1,160 +1,147 @@
 {
   "Version": 1,
+<<<<<<< HEAD
   "WorkspaceRootPath": "C:\\Users\\jorge.moratalla\\Documents\\TowerDefense\\",
+  "Documents": [],
+=======
+  "WorkspaceRootPath": "C:\\Users\\malco\\Documents\\Proyecto_Final\\TowerDefense\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{17BB7AF0-A1AD-DCE4-09CE-1D3A3635465B}|Assembly-CSharp.csproj|C:\\Users\\jorge.moratalla\\Documents\\TowerDefense\\assets\\scripts\\zombiemovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{17BB7AF0-A1AD-DCE4-09CE-1D3A3635465B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\zombiemovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{17BB7AF0-A1AD-DCE4-09CE-1D3A3635465B}|Assembly-CSharp.csproj|C:\\Users\\jorge.moratalla\\Documents\\TowerDefense\\assets\\scripts\\monstergenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{17BB7AF0-A1AD-DCE4-09CE-1D3A3635465B}|Assembly-CSharp.csproj|C:\\Users\\malco\\Documents\\Proyecto_Final\\TowerDefense\\assets\\scripts\\monstergenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{17BB7AF0-A1AD-DCE4-09CE-1D3A3635465B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\monstergenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{17BB7AF0-A1AD-DCE4-09CE-1D3A3635465B}|Assembly-CSharp.csproj|C:\\Users\\jorge.moratalla\\Documents\\TowerDefense\\assets\\scripts\\defense.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{17BB7AF0-A1AD-DCE4-09CE-1D3A3635465B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\defense.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{17BB7AF0-A1AD-DCE4-09CE-1D3A3635465B}|Assembly-CSharp.csproj|C:\\Users\\malco\\Documents\\Proyecto_Final\\TowerDefense\\assets\\scripts\\zombiemovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{17BB7AF0-A1AD-DCE4-09CE-1D3A3635465B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\zombiemovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{17BB7AF0-A1AD-DCE4-09CE-1D3A3635465B}|Assembly-CSharp.csproj|c:\\users\\jorge.moratalla\\documents\\towerdefense\\assets\\scripts\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{17BB7AF0-A1AD-DCE4-09CE-1D3A3635465B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{17BB7AF0-A1AD-DCE4-09CE-1D3A3635465B}|Assembly-CSharp.csproj|C:\\Users\\jorge.moratalla\\Documents\\TowerDefense\\assets\\scripts\\turretselection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{17BB7AF0-A1AD-DCE4-09CE-1D3A3635465B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\turretselection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{17BB7AF0-A1AD-DCE4-09CE-1D3A3635465B}|Assembly-CSharp.csproj|C:\\Users\\jorge.moratalla\\Documents\\TowerDefense\\assets\\scripts\\proyectil.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{17BB7AF0-A1AD-DCE4-09CE-1D3A3635465B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\proyectil.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{17BB7AF0-A1AD-DCE4-09CE-1D3A3635465B}|Assembly-CSharp.csproj|C:\\Users\\jorge.moratalla\\Documents\\TowerDefense\\assets\\scripts\\scoremanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{17BB7AF0-A1AD-DCE4-09CE-1D3A3635465B}|Assembly-CSharp.csproj|C:\\Users\\malco\\Documents\\Proyecto_Final\\TowerDefense\\assets\\scripts\\scoremanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{17BB7AF0-A1AD-DCE4-09CE-1D3A3635465B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\scoremanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{17BB7AF0-A1AD-DCE4-09CE-1D3A3635465B}|Assembly-CSharp.csproj|C:\\Users\\jorge.moratalla\\Documents\\TowerDefense\\assets\\scripts\\scoreui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{17BB7AF0-A1AD-DCE4-09CE-1D3A3635465B}|Assembly-CSharp.csproj|C:\\Users\\malco\\Documents\\Proyecto_Final\\TowerDefense\\assets\\scripts\\scoreui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{17BB7AF0-A1AD-DCE4-09CE-1D3A3635465B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\scoreui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jorge.moratalla\\Documents\\TowerDefense\\Assets\\Scripts\\UpgradeController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\UpgradeController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{17BB7AF0-A1AD-DCE4-09CE-1D3A3635465B}|Assembly-CSharp.csproj|C:\\Users\\jorge.moratalla\\Documents\\TowerDefense\\assets\\scripts\\turret1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{17BB7AF0-A1AD-DCE4-09CE-1D3A3635465B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\turret1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{17BB7AF0-A1AD-DCE4-09CE-1D3A3635465B}|Assembly-CSharp.csproj|C:\\Users\\jorge.moratalla\\Documents\\TowerDefense\\assets\\scripts\\turret2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{17BB7AF0-A1AD-DCE4-09CE-1D3A3635465B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\turret2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{17BB7AF0-A1AD-DCE4-09CE-1D3A3635465B}|Assembly-CSharp.csproj|C:\\Users\\jorge.moratalla\\Documents\\TowerDefense\\assets\\scripts\\turretbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{17BB7AF0-A1AD-DCE4-09CE-1D3A3635465B}|Assembly-CSharp.csproj|C:\\Users\\malco\\Documents\\Proyecto_Final\\TowerDefense\\assets\\scripts\\turretbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{17BB7AF0-A1AD-DCE4-09CE-1D3A3635465B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\turretbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{17BB7AF0-A1AD-DCE4-09CE-1D3A3635465B}|Assembly-CSharp.csproj|C:\\Users\\jorge.moratalla\\Documents\\TowerDefense\\assets\\scripts\\turretcontroler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{17BB7AF0-A1AD-DCE4-09CE-1D3A3635465B}|Assembly-CSharp.csproj|C:\\Users\\malco\\Documents\\Proyecto_Final\\TowerDefense\\assets\\scripts\\turret1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{17BB7AF0-A1AD-DCE4-09CE-1D3A3635465B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\turret1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{17BB7AF0-A1AD-DCE4-09CE-1D3A3635465B}|Assembly-CSharp.csproj|c:\\users\\malco\\documents\\proyecto_final\\towerdefense\\assets\\scripts\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{17BB7AF0-A1AD-DCE4-09CE-1D3A3635465B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{17BB7AF0-A1AD-DCE4-09CE-1D3A3635465B}|Assembly-CSharp.csproj|C:\\Users\\malco\\Documents\\Proyecto_Final\\TowerDefense\\assets\\scripts\\defense.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{17BB7AF0-A1AD-DCE4-09CE-1D3A3635465B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\defense.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{17BB7AF0-A1AD-DCE4-09CE-1D3A3635465B}|Assembly-CSharp.csproj|C:\\Users\\malco\\Documents\\Proyecto_Final\\TowerDefense\\assets\\scripts\\turret2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{17BB7AF0-A1AD-DCE4-09CE-1D3A3635465B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\turret2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{17BB7AF0-A1AD-DCE4-09CE-1D3A3635465B}|Assembly-CSharp.csproj|C:\\Users\\malco\\Documents\\Proyecto_Final\\TowerDefense\\assets\\scripts\\turretcontroler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{17BB7AF0-A1AD-DCE4-09CE-1D3A3635465B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\turretcontroler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{17BB7AF0-A1AD-DCE4-09CE-1D3A3635465B}|Assembly-CSharp.csproj|C:\\Users\\jorge.moratalla\\Documents\\TowerDefense\\assets\\scripts\\castlecontroler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{17BB7AF0-A1AD-DCE4-09CE-1D3A3635465B}|Assembly-CSharp.csproj|C:\\Users\\malco\\Documents\\Proyecto_Final\\TowerDefense\\assets\\scripts\\turretselection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{17BB7AF0-A1AD-DCE4-09CE-1D3A3635465B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\turretselection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{17BB7AF0-A1AD-DCE4-09CE-1D3A3635465B}|Assembly-CSharp.csproj|C:\\Users\\malco\\Documents\\Proyecto_Final\\TowerDefense\\assets\\scripts\\controlador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{17BB7AF0-A1AD-DCE4-09CE-1D3A3635465B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\controlador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{17BB7AF0-A1AD-DCE4-09CE-1D3A3635465B}|Assembly-CSharp.csproj|C:\\Users\\malco\\Documents\\Proyecto_Final\\TowerDefense\\assets\\scripts\\proyectil.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{17BB7AF0-A1AD-DCE4-09CE-1D3A3635465B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\proyectil.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{17BB7AF0-A1AD-DCE4-09CE-1D3A3635465B}|Assembly-CSharp.csproj|C:\\Users\\malco\\Documents\\Proyecto_Final\\TowerDefense\\assets\\scripts\\castlecontroler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{17BB7AF0-A1AD-DCE4-09CE-1D3A3635465B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\castlecontroler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{17BB7AF0-A1AD-DCE4-09CE-1D3A3635465B}|Assembly-CSharp.csproj|C:\\Users\\jorge.moratalla\\Documents\\TowerDefense\\assets\\scripts\\controlador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{17BB7AF0-A1AD-DCE4-09CE-1D3A3635465B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\controlador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jorge.moratalla\\Documents\\TowerDefense\\Assets\\Scripts\\UpgradeController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
+>>>>>>> 6406e1835e84ffe6a92ed45cb70729fd496a9e3d
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
+<<<<<<< HEAD
+      "DocumentGroups": []
+=======
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 14,
+          "SelectedChildIndex": 10,
           "Children": [
             {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "TurretSelection.cs",
-              "DocumentMoniker": "C:\\Users\\jorge.moratalla\\Documents\\TowerDefense\\Assets\\Scripts\\TurretSelection.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\TurretSelection.cs",
-              "ToolTip": "C:\\Users\\jorge.moratalla\\Documents\\TowerDefense\\Assets\\Scripts\\TurretSelection.cs",
-              "RelativeToolTip": "Assets\\Scripts\\TurretSelection.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-03T16:11:34.751Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "UpgradeController.cs",
-              "DocumentMoniker": "C:\\Users\\jorge.moratalla\\Documents\\TowerDefense\\Assets\\Scripts\\UpgradeController.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\UpgradeController.cs",
-              "ToolTip": "C:\\Users\\jorge.moratalla\\Documents\\TowerDefense\\Assets\\Scripts\\UpgradeController.cs",
-              "RelativeToolTip": "Assets\\Scripts\\UpgradeController.cs",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-03T15:52:28.413Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 7,
               "Title": "Defense.cs",
-              "DocumentMoniker": "C:\\Users\\jorge.moratalla\\Documents\\TowerDefense\\Assets\\Scripts\\Defense.cs",
+              "DocumentMoniker": "C:\\Users\\malco\\Documents\\Proyecto_Final\\TowerDefense\\Assets\\Scripts\\Defense.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Defense.cs",
-              "ToolTip": "C:\\Users\\jorge.moratalla\\Documents\\TowerDefense\\Assets\\Scripts\\Defense.cs",
+              "ToolTip": "C:\\Users\\malco\\Documents\\Proyecto_Final\\TowerDefense\\Assets\\Scripts\\Defense.cs",
               "RelativeToolTip": "Assets\\Scripts\\Defense.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABAAAAAAAAAAAAAQwCYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-03T14:14:32.166Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 8,
               "Title": "Turret2.cs",
-              "DocumentMoniker": "C:\\Users\\jorge.moratalla\\Documents\\TowerDefense\\Assets\\Scripts\\Turret2.cs",
+              "DocumentMoniker": "C:\\Users\\malco\\Documents\\Proyecto_Final\\TowerDefense\\Assets\\Scripts\\Turret2.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Turret2.cs",
-              "ToolTip": "C:\\Users\\jorge.moratalla\\Documents\\TowerDefense\\Assets\\Scripts\\Turret2.cs",
+              "ToolTip": "C:\\Users\\malco\\Documents\\Proyecto_Final\\TowerDefense\\Assets\\Scripts\\Turret2.cs",
               "RelativeToolTip": "Assets\\Scripts\\Turret2.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-03T13:39:01.522Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 5,
               "Title": "Turret1.cs",
-              "DocumentMoniker": "C:\\Users\\jorge.moratalla\\Documents\\TowerDefense\\Assets\\Scripts\\Turret1.cs",
+              "DocumentMoniker": "C:\\Users\\malco\\Documents\\Proyecto_Final\\TowerDefense\\Assets\\Scripts\\Turret1.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Turret1.cs",
-              "ToolTip": "C:\\Users\\jorge.moratalla\\Documents\\TowerDefense\\Assets\\Scripts\\Turret1.cs",
+              "ToolTip": "C:\\Users\\malco\\Documents\\Proyecto_Final\\TowerDefense\\Assets\\Scripts\\Turret1.cs",
               "RelativeToolTip": "Assets\\Scripts\\Turret1.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAABGAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-03T13:38:34.207Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 4,
               "Title": "TurretBase.cs",
-              "DocumentMoniker": "C:\\Users\\jorge.moratalla\\Documents\\TowerDefense\\Assets\\Scripts\\TurretBase.cs",
+              "DocumentMoniker": "C:\\Users\\malco\\Documents\\Proyecto_Final\\TowerDefense\\Assets\\Scripts\\TurretBase.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\TurretBase.cs",
-              "ToolTip": "C:\\Users\\jorge.moratalla\\Documents\\TowerDefense\\Assets\\Scripts\\TurretBase.cs",
+              "ToolTip": "C:\\Users\\malco\\Documents\\Proyecto_Final\\TowerDefense\\Assets\\Scripts\\TurretBase.cs",
               "RelativeToolTip": "Assets\\Scripts\\TurretBase.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAABGAAAAAAAAAA==",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAAwCYAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-03T13:37:34.929Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "Menu.cs",
-              "DocumentMoniker": "C:\\Users\\jorge.moratalla\\Documents\\TowerDefense\\Assets\\Scripts\\Menu.cs",
+              "DocumentMoniker": "C:\\Users\\malco\\Documents\\Proyecto_Final\\TowerDefense\\Assets\\Scripts\\Menu.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Menu.cs",
-              "ToolTip": "C:\\Users\\jorge.moratalla\\Documents\\TowerDefense\\Assets\\Scripts\\Menu.cs",
+              "ToolTip": "C:\\Users\\malco\\Documents\\Proyecto_Final\\TowerDefense\\Assets\\Scripts\\Menu.cs",
               "RelativeToolTip": "Assets\\Scripts\\Menu.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -163,11 +150,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 3,
               "Title": "ScoreUI.cs",
-              "DocumentMoniker": "C:\\Users\\jorge.moratalla\\Documents\\TowerDefense\\Assets\\Scripts\\ScoreUI.cs",
+              "DocumentMoniker": "C:\\Users\\malco\\Documents\\Proyecto_Final\\TowerDefense\\Assets\\Scripts\\ScoreUI.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\ScoreUI.cs",
-              "ToolTip": "C:\\Users\\jorge.moratalla\\Documents\\TowerDefense\\Assets\\Scripts\\ScoreUI.cs",
+              "ToolTip": "C:\\Users\\malco\\Documents\\Proyecto_Final\\TowerDefense\\Assets\\Scripts\\ScoreUI.cs",
               "RelativeToolTip": "Assets\\Scripts\\ScoreUI.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -176,36 +163,101 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 2,
               "Title": "ScoreManager.cs",
-              "DocumentMoniker": "C:\\Users\\jorge.moratalla\\Documents\\TowerDefense\\Assets\\Scripts\\ScoreManager.cs",
+              "DocumentMoniker": "C:\\Users\\malco\\Documents\\Proyecto_Final\\TowerDefense\\Assets\\Scripts\\ScoreManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\ScoreManager.cs",
-              "ToolTip": "C:\\Users\\jorge.moratalla\\Documents\\TowerDefense\\Assets\\Scripts\\ScoreManager.cs",
+              "ToolTip": "C:\\Users\\malco\\Documents\\Proyecto_Final\\TowerDefense\\Assets\\Scripts\\ScoreManager.cs",
               "RelativeToolTip": "Assets\\Scripts\\ScoreManager.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAYwCQAAAAbAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-03T10:34:55.445Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 9,
+              "Title": "TurretControler.cs",
+              "DocumentMoniker": "C:\\Users\\malco\\Documents\\Proyecto_Final\\TowerDefense\\Assets\\Scripts\\TurretControler.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\TurretControler.cs",
+              "ToolTip": "C:\\Users\\malco\\Documents\\Proyecto_Final\\TowerDefense\\Assets\\Scripts\\TurretControler.cs",
+              "RelativeToolTip": "Assets\\Scripts\\TurretControler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEUAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-03T10:34:55.448Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ZombieMovement.cs",
+              "DocumentMoniker": "C:\\Users\\malco\\Documents\\Proyecto_Final\\TowerDefense\\Assets\\Scripts\\ZombieMovement.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\ZombieMovement.cs",
+              "ToolTip": "C:\\Users\\malco\\Documents\\Proyecto_Final\\TowerDefense\\Assets\\Scripts\\ZombieMovement.cs",
+              "RelativeToolTip": "Assets\\Scripts\\ZombieMovement.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEQAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-03T10:34:55.664Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MonsterGenerator.cs",
+              "DocumentMoniker": "C:\\Users\\malco\\Documents\\Proyecto_Final\\TowerDefense\\Assets\\Scripts\\MonsterGenerator.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\MonsterGenerator.cs",
+              "ToolTip": "C:\\Users\\malco\\Documents\\Proyecto_Final\\TowerDefense\\Assets\\Scripts\\MonsterGenerator.cs",
+              "RelativeToolTip": "Assets\\Scripts\\MonsterGenerator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADcAAABIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-03T10:34:55.58Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "TurretSelection.cs",
+              "DocumentMoniker": "C:\\Users\\malco\\Documents\\Proyecto_Final\\TowerDefense\\Assets\\Scripts\\TurretSelection.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\TurretSelection.cs",
+              "ToolTip": "C:\\Users\\malco\\Documents\\Proyecto_Final\\TowerDefense\\Assets\\Scripts\\TurretSelection.cs",
+              "RelativeToolTip": "Assets\\Scripts\\TurretSelection.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-03T16:11:34.751Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
               "Title": "controlador.cs",
-              "DocumentMoniker": "C:\\Users\\jorge.moratalla\\Documents\\TowerDefense\\Assets\\Scripts\\controlador.cs",
+              "DocumentMoniker": "C:\\Users\\malco\\Documents\\Proyecto_Final\\TowerDefense\\Assets\\Scripts\\controlador.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\controlador.cs",
-              "ToolTip": "C:\\Users\\jorge.moratalla\\Documents\\TowerDefense\\Assets\\Scripts\\controlador.cs",
+              "ToolTip": "C:\\Users\\malco\\Documents\\Proyecto_Final\\TowerDefense\\Assets\\Scripts\\controlador.cs",
               "RelativeToolTip": "Assets\\Scripts\\controlador.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-03T10:34:55.447Z"
+              "WhenOpened": "2025-01-03T10:34:55.447Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "UpgradeController.cs",
+              "DocumentMoniker": "C:\\Users\\jorge.moratalla\\Documents\\TowerDefense\\Assets\\Scripts\\UpgradeController.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\jorge.moratalla\\Documents\\TowerDefense\\Assets\\Scripts\\UpgradeController.cs",
+              "ToolTip": "C:\\Users\\jorge.moratalla\\Documents\\TowerDefense\\Assets\\Scripts\\UpgradeController.cs",
+              "RelativeToolTip": "..\\..\\..\\..\\jorge.moratalla\\Documents\\TowerDefense\\Assets\\Scripts\\UpgradeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-03T15:52:28.413Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 13,
               "Title": "CastleControler.cs",
-              "DocumentMoniker": "C:\\Users\\jorge.moratalla\\Documents\\TowerDefense\\Assets\\Scripts\\CastleControler.cs",
+              "DocumentMoniker": "C:\\Users\\malco\\Documents\\Proyecto_Final\\TowerDefense\\Assets\\Scripts\\CastleControler.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\CastleControler.cs",
-              "ToolTip": "C:\\Users\\jorge.moratalla\\Documents\\TowerDefense\\Assets\\Scripts\\CastleControler.cs",
+              "ToolTip": "C:\\Users\\malco\\Documents\\Proyecto_Final\\TowerDefense\\Assets\\Scripts\\CastleControler.cs",
               "RelativeToolTip": "Assets\\Scripts\\CastleControler.cs",
               "ViewState": "AgIAACEAAAAAAAAAAAAYwEEAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -214,57 +266,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 12,
-              "Title": "TurretControler.cs",
-              "DocumentMoniker": "C:\\Users\\jorge.moratalla\\Documents\\TowerDefense\\Assets\\Scripts\\TurretControler.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\TurretControler.cs",
-              "ToolTip": "C:\\Users\\jorge.moratalla\\Documents\\TowerDefense\\Assets\\Scripts\\TurretControler.cs",
-              "RelativeToolTip": "Assets\\Scripts\\TurretControler.cs",
-              "ViewState": "AgIAACMAAAAAAAAAAAAgwFIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-03T10:34:55.448Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "MonsterGenerator.cs",
-              "DocumentMoniker": "C:\\Users\\jorge.moratalla\\Documents\\TowerDefense\\Assets\\Scripts\\MonsterGenerator.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\MonsterGenerator.cs",
-              "ToolTip": "C:\\Users\\jorge.moratalla\\Documents\\TowerDefense\\Assets\\Scripts\\MonsterGenerator.cs",
-              "RelativeToolTip": "Assets\\Scripts\\MonsterGenerator.cs",
-              "ViewState": "AgIAACEAAAAAAAAAAAAYwB4AAABtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-03T10:34:55.58Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
               "Title": "Proyectil.cs",
-              "DocumentMoniker": "C:\\Users\\jorge.moratalla\\Documents\\TowerDefense\\Assets\\Scripts\\Proyectil.cs",
+              "DocumentMoniker": "C:\\Users\\malco\\Documents\\Proyecto_Final\\TowerDefense\\Assets\\Scripts\\Proyectil.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Proyectil.cs",
-              "ToolTip": "C:\\Users\\jorge.moratalla\\Documents\\TowerDefense\\Assets\\Scripts\\Proyectil.cs",
+              "ToolTip": "C:\\Users\\malco\\Documents\\Proyecto_Final\\TowerDefense\\Assets\\Scripts\\Proyectil.cs",
               "RelativeToolTip": "Assets\\Scripts\\Proyectil.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAAwBAAAAAoAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-03T10:34:55.663Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ZombieMovement.cs",
-              "DocumentMoniker": "C:\\Users\\jorge.moratalla\\Documents\\TowerDefense\\Assets\\Scripts\\ZombieMovement.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\ZombieMovement.cs",
-              "ToolTip": "C:\\Users\\jorge.moratalla\\Documents\\TowerDefense\\Assets\\Scripts\\ZombieMovement.cs",
-              "RelativeToolTip": "Assets\\Scripts\\ZombieMovement.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-03T10:34:55.664Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-03T10:34:55.663Z"
             }
           ]
         }
       ]
+>>>>>>> 6406e1835e84ffe6a92ed45cb70729fd496a9e3d
     }
   ]
 }
