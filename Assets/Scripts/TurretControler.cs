@@ -41,20 +41,6 @@ public class TurretController : MonoBehaviour
                 return;
             }
 
-            Vector3 colliderSize = new Vector3(
-                turretCollider.size.x * turretPrefab.transform.localScale.x,
-                turretCollider.size.y * turretPrefab.transform.localScale.y,
-                turretCollider.size.z * turretPrefab.transform.localScale.z
-            );
-            Vector3 halfExtents = colliderSize / 2f;
-
-            Collider[] collidersInTurret = Physics.OverlapBox(adjustedPosition, halfExtents, Quaternion.identity, LayerMask.GetMask("Turret"));
-            if (collidersInTurret.Length > 0)
-            {
-                Debug.Log("You cannot place a turret here, another turret is already present.");
-                return;
-            }
-
             if (ScoreManager.Instance.SpendPoints(turretCost))
             {
                 Instantiate(turretPrefab, adjustedPosition, Quaternion.identity);

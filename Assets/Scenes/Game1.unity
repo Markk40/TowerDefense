@@ -4713,6 +4713,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -175143486070967235, guid: 0efd57f753632de4195c2d1f9033fc03,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 2.4108727
+      objectReference: {fileID: 0}
+    - target: {fileID: -175143486070967235, guid: 0efd57f753632de4195c2d1f9033fc03,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -175143486070967235, guid: 0efd57f753632de4195c2d1f9033fc03,
+        type: 3}
+      propertyPath: m_Center.y
+      value: 0.9554374
+      objectReference: {fileID: 0}
     - target: {fileID: 2858667412075793947, guid: 0efd57f753632de4195c2d1f9033fc03,
         type: 3}
       propertyPath: bulletPrefab

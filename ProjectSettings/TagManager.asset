@@ -17,7 +17,7 @@ TagManager:
   - Turret
   - Water
   - UI
-  - 
+  - SphereCollider
   - 
   - 
   - 
@@ -46,4 +46,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Turret
+    uniqueID: 3391491875
     locked: 0
