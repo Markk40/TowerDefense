@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Proyectil : MonoBehaviour
+public class Bullet : MonoBehaviour
 {
     public float speed = 20f;
     public int damage = 20;
