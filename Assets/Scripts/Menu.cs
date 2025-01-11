@@ -6,10 +6,9 @@ public class MainMenu : MonoBehaviour
     public GameObject gameplayPanel;
     public GameObject instructionsPanel;
 
-    public void StartGame(string gameScene)
+    public void ChangeScene(string gameScene)
     {
         SceneManager.LoadScene(gameScene);
-        Debug.Log("Scene changed to the game");
     }
 
     public void ExitGame()

@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 public class MonsterGenerator : MonoBehaviour
 {
-    public GameObject baseZombiePrefab;
+    public GameObject level1ZombiePrefab;
     public GameObject level2ZombiePrefab;
     public List<Transform> waypoints;
     public float interval = 2.0f;
@@ -13,9 +13,11 @@ public class MonsterGenerator : MonoBehaviour
 
     private int generatedEnemies = 0;
     private System.Random random = new System.Random();
+    private EnemyFactory enemyFactory;
 
     void Start()
     {
+        enemyFactory = new EnemyFactory(level1ZombiePrefab, level2ZombiePrefab);
         StartCoroutine(GenerateEnemies());
     }
 
@@ -23,24 +25,8 @@ public class MonsterGenerator : MonoBehaviour
     {
         while (true)
         {
-            GameObject clonedEnemy;
-
-            if (generatedEnemies >= 75)
-            {
-                clonedEnemy = Instantiate(level2ZombiePrefab, waypoints[0].position, Quaternion.identity);
-            }
-            else if (generatedEnemies >= 15 && random.Next(100) < 40)
-            {
-                clonedEnemy = Instantiate(level2ZombiePrefab, waypoints[0].position, Quaternion.identity);
-            }
-            else
-            {
-                clonedEnemy = Instantiate(baseZombiePrefab, waypoints[0].position, Quaternion.identity);
-            }
-
-            clonedEnemy.SetActive(true);
-            EnemyMovement enemyScript = clonedEnemy.GetComponent<EnemyMovement>();
-            enemyScript.waypoints = waypoints;
+            Enemy enemigo = enemyFactory.CreateEnemy(generatedEnemies);
+            enemigo.Initialize(waypoints[0].position, waypoints);
 
             generatedEnemies++;
 
