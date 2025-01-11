@@ -52,4 +52,10 @@ public class ScoreManager
     {
         return points;
     }
+
+    public void ResetPoints()
+    {
+        points = 190; // Restablece los puntos
+        OnScoreChanged?.Invoke(points); // Notifica el cambio para actualizar la UI
+    }
 }
