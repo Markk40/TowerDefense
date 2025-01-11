@@ -1,34 +1,33 @@
 using UnityEngine;
 
-public class SeleccionTorreta : MonoBehaviour
+public class TurretSelection : MonoBehaviour
 {
-    public GameObject torretaSeleccionada; // Referencia a la torreta seleccionada
-    public LayerMask capaTorreta; // Capa para identificar las torretas en el raycast
+    public GameObject selectedTurret; // Referencia a la torreta seleccionada
+    public LayerMask turretLayer; // Capa para identificar las torretas en el raycast
 
     void Update()
     {
         if (Input.GetMouseButtonDown(0)) // Botón izquierdo del ratón
         {
-            SeleccionarTorreta();
+            SelectTurret();
         }
     }
 
-    void SeleccionarTorreta()
+    void SelectTurret()
     {
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
 
-        // Comprobar si el raycast colisiona con una torreta
-        if (Physics.Raycast(ray, out hit, Mathf.Infinity, capaTorreta))
+        if (Physics.Raycast(ray, out hit, Mathf.Infinity, turretLayer))
         {
-            GameObject torreta = hit.collider.gameObject;
+            GameObject turret = hit.collider.gameObject;
 
-            // Verificar si el objeto tiene un script derivado de TorretaBase
-            if (torreta.GetComponent<TorretaBase>() != null)
+            if (turret.GetComponent<TurretBase>() != null)
             {
-                torretaSeleccionada = torreta; // Guardar la referencia
-                Debug.Log($"Torreta seleccionada: {torreta.name}");
+                selectedTurret = turret;
+                Debug.Log($"Selected turret: {turret.name}");
             }
         }
     }
 }
+

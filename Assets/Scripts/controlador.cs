@@ -1,32 +1,32 @@
 using UnityEngine;
 
-public class EstadoObjeto : MonoBehaviour
+public class ObjectState : MonoBehaviour
 {
-    public GameObject objetoASupervisar; // Asigna el objeto que deseas supervisar
-    public float intervalo = 0.1f; // Tiempo entre verificaciones
+    public GameObject objectToMonitor; // Assign the object you want to monitor
+    public float interval = 0.1f; // Time between checks
 
-    private bool estabaDestruido = false; // Para evitar mensajes repetidos
+    private bool wasDestroyed = false; // To avoid repeated messages
 
     void Start()
     {
-        // Inicia la supervisión en intervalos regulares
-        InvokeRepeating(nameof(ComprobarEstado), 0f, intervalo);
+        // Start monitoring at regular intervals
+        InvokeRepeating(nameof(CheckState), 0f, interval);
     }
 
-    void ComprobarEstado()
+    void CheckState()
     {
-        if (objetoASupervisar == null)
+        if (objectToMonitor == null)
         {
-            if (!estabaDestruido)
+            if (!wasDestroyed)
             {
-                //Debug.Log($"El objeto {objetoASupervisar} ha sido destruido.");
-                estabaDestruido = true;
+                //Debug.Log($"The object {objectToMonitor} has been destroyed.");
+                wasDestroyed = true;
             }
         }
         else
         {
-            //Debug.Log($"El objeto {objetoASupervisar.name} sigue existiendo.");
-            estabaDestruido = false;
+            //Debug.Log($"The object {objectToMonitor.name} still exists.");
+            wasDestroyed = false;
         }
     }
 }

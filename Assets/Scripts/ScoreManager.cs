@@ -1,26 +1,22 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
 using System;
 using TMPro;
 
 public class ScoreManager
 {
     private static ScoreManager instance; // Singleton instance
-    private int puntos;
+    private int points;
     public TextMeshProUGUI pointsText;
 
-    // Evento para notificar cambios en los puntos
+    // Event to notify point changes
     public event Action<int> OnScoreChanged;
 
-    // Constructor privado para Singleton
+    // Private constructor for Singleton
     private ScoreManager()
     {
-        puntos = 190; // Inicializar puntos
+        points = 190; // Initialize points
     }
 
-    // Método para obtener la instancia
+    // Method to get the instance
     public static ScoreManager Instance
     {
         get
@@ -31,30 +27,29 @@ public class ScoreManager
         }
     }
 
-    // Método para añadir puntos
-    public void AddPoints(int cantidad)
+    // Method to add points
+    public void AddPoints(int amount)
     {
-        puntos += cantidad;
-        OnScoreChanged?.Invoke(puntos); // Notificar cambio
+        points += amount;
+        OnScoreChanged?.Invoke(points); // Notify change
     }
 
-
-    // Método para gastar puntos
-    public bool SpendPoints(int cantidad)
+    // Method to spend points
+    public bool SpendPoints(int amount)
     {
-        if (puntos >= cantidad)
+        if (points >= amount)
         {
-            puntos -= cantidad;
-            OnScoreChanged?.Invoke(puntos); // Notificar cambio
+            points -= amount;
+            OnScoreChanged?.Invoke(points); // Notify change
             return true;
         }
 
-        return false; // No hay puntos suficientes
+        return false; // Not enough points
     }
 
-    // Método para obtener los puntos actuales
+    // Method to get current points
     public int GetPoints()
     {
-        return puntos;
+        return points;
     }
 }

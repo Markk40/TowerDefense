@@ -1,15 +1,16 @@
 using UnityEngine;
 using System.Collections.Generic;
 
-public abstract class TorretaBase : MonoBehaviour
+public abstract class TurretBase : MonoBehaviour
 {
-    public GameObject prefabBala; // Prefab de la bala
-    public float tiempoEntreDisparos = 1f; // Intervalo entre disparos
-    private int nivelTorreta = 1;
+    public GameObject bulletPrefab; // Prefab de la bala
+    public float fireInterval = 1f; // Intervalo entre disparos
+    private int turretLevel = 1;
 
-    protected float temporizadorDisparo = 0f;
-    protected List<GameObject> enemigosEnRango = new List<GameObject>(); // Lista de enemigos dentro del rango
+    protected float fireTimer = 0f;
+    protected List<GameObject> enemiesInRange = new List<GameObject>(); // Lista de enemigos dentro del rango
     protected Animator animator;
+
     void Start()
     {
         animator = GetComponent<Animator>(); // Inicializa el Animator
@@ -18,84 +19,76 @@ public abstract class TorretaBase : MonoBehaviour
 
     void Update()
     {
-        temporizadorDisparo += Time.deltaTime;
+        fireTimer += Time.deltaTime;
 
-        // Buscar al enemigo más cercano en la lista de enemigos en rango
-        GameObject enemigoMasCercano = ObtenerEnemigoMasCercano();
+        GameObject closestEnemy = GetClosestEnemy();
 
-        if (enemigoMasCercano != null)
+        if (closestEnemy != null)
         {
-            // Apuntar hacia el enemigo más cercano
-            ApuntarAlEnemigo(enemigoMasCercano.transform);
+            AimAtEnemy(closestEnemy.transform);
 
-            // Disparar si es el momento adecuado
-            if (temporizadorDisparo >= tiempoEntreDisparos)
+            if (fireTimer >= fireInterval)
             {
                 if (animator != null)
                 {
-                    // Activar la animación de disparo
                     animator.SetTrigger("Shoot");
                 }
-                
-                Disparar(enemigoMasCercano.transform);
 
-                temporizadorDisparo = 0f;
+                Fire(closestEnemy.transform);
+                fireTimer = 0f;
             }
         }
     }
 
-
     void OnTriggerEnter(Collider other)
     {
-        // Si un enemigo entra en el rango, añadirlo a la lista
         if (other.CompareTag("Enemigo"))
         {
-            enemigosEnRango.Add(other.gameObject);
+            enemiesInRange.Add(other.gameObject);
         }
     }
 
     void OnTriggerExit(Collider other)
     {
-        // Si un enemigo sale del rango, eliminarlo de la lista
         if (other.CompareTag("Enemigo"))
         {
-            enemigosEnRango.Remove(other.gameObject);
+            enemiesInRange.Remove(other.gameObject);
         }
     }
 
-    GameObject ObtenerEnemigoMasCercano()
+    GameObject GetClosestEnemy()
     {
-        GameObject enemigoMasCercano = null;
-        float distanciaMinima = Mathf.Infinity;
+        GameObject closestEnemy = null;
+        float minDistance = Mathf.Infinity;
 
-        foreach (GameObject enemigo in enemigosEnRango)
+        foreach (GameObject enemy in enemiesInRange)
         {
-            if (enemigo != null) // Verificar que el enemigo no haya sido destruido
+            if (enemy != null)
             {
-                float distancia = Vector3.Distance(transform.position, enemigo.transform.position);
-                if (distancia < distanciaMinima)
+                float distance = Vector3.Distance(transform.position, enemy.transform.position);
+                if (distance < minDistance)
                 {
-                    distanciaMinima = distancia;
-                    enemigoMasCercano = enemigo;
+                    minDistance = distance;
+                    closestEnemy = enemy;
                 }
             }
         }
 
-        return enemigoMasCercano;
+        return closestEnemy;
     }
 
-    protected void ApuntarAlEnemigo(Transform enemigo)
+    protected void AimAtEnemy(Transform enemy)
     {
-        Vector3 direccion = (enemigo.position - transform.position).normalized;
-        Quaternion rotacionHaciaEnemigo = Quaternion.LookRotation(direccion);
-        transform.rotation = Quaternion.Lerp(transform.rotation, rotacionHaciaEnemigo, Time.deltaTime * 5f);
+        Vector3 direction = (enemy.position - transform.position).normalized;
+        Quaternion lookAtEnemyRotation = Quaternion.LookRotation(direction);
+        transform.rotation = Quaternion.Lerp(transform.rotation, lookAtEnemyRotation, Time.deltaTime * 5f);
     }
 
-    protected abstract void Disparar(Transform objetivo); // Método abstracto para que cada torreta implemente su disparo específico
+    protected abstract void Fire(Transform target); // Método abstracto para que cada torreta implemente su disparo específico
 
-    public int NivelTorreta
+    public int TurretLevel
     {
-        get => nivelTorreta;
-        set => nivelTorreta = value;
+        get => turretLevel;
+        set => turretLevel = value;
     }
 }

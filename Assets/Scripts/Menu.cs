@@ -1,45 +1,40 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class MenuPrincipal : MonoBehaviour
+public class MainMenu : MonoBehaviour
 {
-    public GameObject jugabilidadPanel;
-    public GameObject instruccionesPanel;
-    // Este método cambia a la escena del juego
-    public void IniciarJuego(string EscenaJuego)
+    public GameObject gameplayPanel;
+    public GameObject instructionsPanel;
+
+    public void StartGame(string gameScene)
     {
-        // Asegúrate de usar el nombre exacto de la escena en el método LoadScene
-        SceneManager.LoadScene(EscenaJuego);// Cambia "NombreDeLaEscenaDelJuego" por el nombre real
-        Debug.Log("Se cambio la escena del juego");
+        SceneManager.LoadScene(gameScene);
+        Debug.Log("Scene changed to the game");
     }
 
-    // Este método cierra la aplicación
-    public void SalirDelJuego()
+    public void ExitGame()
     {
-        Application.Quit(); // Esto cerrará la aplicación cuando esté construida
-        Debug.Log("Se cerro el juego");
+        Application.Quit();
+        Debug.Log("Game closed");
     }
 
-    public void ActivarJugabilidad()
+    public void ShowGameplay()
     {
-        jugabilidadPanel.SetActive(true);
+        gameplayPanel.SetActive(true);
     }
 
-    // Este método desactiva el panel de instrucciones
-    public void DesactivarJugabilidad()
+    public void HideGameplay()
     {
-        jugabilidadPanel.SetActive(false);
+        gameplayPanel.SetActive(false);
     }
 
-    public void ActivarInstrucciones()
+    public void ShowInstructions()
     {
-        instruccionesPanel.SetActive(true);
+        instructionsPanel.SetActive(true);
     }
 
-    // Este método desactiva el panel de instrucciones
-    public void DesactivarInstrucciones()
+    public void HideInstructions()
     {
-        instruccionesPanel.SetActive(false);
+        instructionsPanel.SetActive(false);
     }
-
 }

@@ -1,23 +1,21 @@
 using UnityEngine;
 using System.Collections.Generic;
 
-public class MovimientoEnemigo : MonoBehaviour
+public class EnemyMovement : MonoBehaviour
 {
     public List<Transform> waypoints; // Lista de waypoints
-    public float velocidad = 3.0f; // Velocidad de movimiento del monstruo
-    public float velocidadRotacion = 5.0f; // Velocidad de rotación del monstruo
-    public int vida = 100; // Vida del zombie
-    private int puntoActual = 0; // Índice del waypoint actual
+    public float speed = 3.0f; // Velocidad de movimiento del monstruo
+    public float rotationSpeed = 5.0f; // Velocidad de rotación del monstruo
+    public int health = 100; // Vida del zombie
+    private int currentPoint = 0; // Índice del waypoint actual
     private Animator animator; // Referencia al Animator del monstruo
-    private bool estaMuerto = false; // Indica si el zombie está muerto
+    private bool isDead = false; // Indica si el zombie está muerto
     private const int deadPoints = 5;
 
     void Start()
     {
-        // Obtener el componente Animator
         animator = GetComponent<Animator>();
 
-        // Asegúrate de que el monstruo empiece en el primer waypoint
         if (waypoints.Count > 0)
         {
             transform.position = waypoints[0].position;
@@ -26,48 +24,48 @@ public class MovimientoEnemigo : MonoBehaviour
 
     void Update()
     {
-        if (estaMuerto) return; // Si está muerto, no hacer nada más
+        if (isDead) return;
 
-        // Movimiento hacia el waypoint
-        if (puntoActual < waypoints.Count)
+        if (currentPoint < waypoints.Count)
         {
-            Transform objetivo = waypoints[puntoActual];
-            Vector3 direccion = objetivo.position - transform.position;
-            Quaternion rotacionObjetivo = Quaternion.LookRotation(direccion);
+            Transform target = waypoints[currentPoint];
+            Vector3 direction = target.position - transform.position;
+            Quaternion targetRotation = Quaternion.LookRotation(direction);
 
-            transform.rotation = Quaternion.Slerp(transform.rotation, rotacionObjetivo, velocidadRotacion * Time.deltaTime);
-            transform.position += direccion.normalized * velocidad * Time.deltaTime;
+            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
+            transform.position += direction.normalized * speed * Time.deltaTime;
 
-            if (direccion.magnitude < 0.1f)
+            if (direction.magnitude < 0.1f)
             {
-                puntoActual++;
+                currentPoint++;
             }
         }
         else
         {
-            LlegarAlFinal();
+            ReachEnd();
         }
     }
 
-    void LlegarAlFinal()
+    void ReachEnd()
     {
-        estaMuerto = true;
+        isDead = true;
         animator.SetTrigger("Morir");
-        Destroy(gameObject, 2f); // Destruye el zombie 2 segundos después
+        Destroy(gameObject, 2f);
     }
 
-    public void RecibirDaño(int cantidad)
+    public void TakeDamage(int amount)
     {
-        if (estaMuerto) return; // No hacer nada si ya está muerto
+        if (isDead) return;
 
-        vida -= cantidad;
+        health -= amount;
 
-        if (vida <= 0)
+        if (health <= 0)
         {
-            estaMuerto = true;
-            animator.SetTrigger("Morir"); // Activar la animación de muerte
+            isDead = true;
+            animator.SetTrigger("Morir");
             ScoreManager.Instance.AddPoints(deadPoints);
-            Destroy(gameObject, 2f); // Destruye el zombie después de 2 segundos
+            Destroy(gameObject, 2f);
         }
     }
 }
+

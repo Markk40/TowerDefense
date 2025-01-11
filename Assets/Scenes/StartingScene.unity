@@ -199,23 +199,23 @@ MonoBehaviour:
     you must strategically place turrets along a route where enemies move. You can
     upgrade turrets in order to kill enemies more easily.
 
-    
+
 
     Aim
 
-    Your
-    main objective is to prevent the enemies from reaching the castle. To achieve
-    this, you must:
+    Your main
+    objective is to prevent the enemies from reaching the castle. To achieve this,
+    you must:
 
-    
+
 
     1. Place turrets at strategic points on the map.
 
-    2.
-    Upgrade your turrets to increase their power.
+    2. Upgrade
+    your turrets to increase their power.
 
-    3. Earn points by destroying
-    enemies to upgrade and place more turrets.'
+    3. Earn points by destroying enemies
+    to upgrade and place more turrets.'
 --- !u!222 &162939428
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -308,8 +308,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 911107651}
-        m_TargetAssemblyTypeName: MenuPrincipal, Assembly-CSharp
-        m_MethodName: ActivarInstrucciones
+        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
+        m_MethodName: ShowInstructions
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -440,8 +440,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 911107651}
-        m_TargetAssemblyTypeName: MenuPrincipal, Assembly-CSharp
-        m_MethodName: DesactivarInstrucciones
+        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
+        m_MethodName: HideInstructions
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1012,8 +1012,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 911107651}
-        m_TargetAssemblyTypeName: MenuPrincipal, Assembly-CSharp
-        m_MethodName: DesactivarJugabilidad
+        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
+        m_MethodName: HideGameplay
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1387,8 +1387,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09740b713a052ec4ba50f1e3786546f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jugabilidadPanel: {fileID: 1876906843}
-  instruccionesPanel: {fileID: 593302155}
+  gameplayPanel: {fileID: 1876906843}
+  instructionsPanel: {fileID: 593302155}
 --- !u!1 &1275471676
 GameObject:
   m_ObjectHideFlags: 0
@@ -1864,8 +1864,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 911107651}
-        m_TargetAssemblyTypeName: MenuPrincipal, Assembly-CSharp
-        m_MethodName: ActivarJugabilidad
+        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
+        m_MethodName: ShowGameplay
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1996,8 +1996,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 911107651}
-        m_TargetAssemblyTypeName: MenuPrincipal, Assembly-CSharp
-        m_MethodName: IniciarJuego
+        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
+        m_MethodName: StartGame
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2264,8 +2264,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 911107651}
-        m_TargetAssemblyTypeName: MenuPrincipal, Assembly-CSharp
-        m_MethodName: SalirDelJuego
+        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
+        m_MethodName: ExitGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

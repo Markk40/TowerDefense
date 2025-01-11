@@ -507,7 +507,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82383c71998f4004f8168ead60fed7b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabTorreta: {fileID: 3646179969643898423, guid: 0efd57f753632de4195c2d1f9033fc03,
+  turretPrefab: {fileID: 3646179969643898423, guid: 0efd57f753632de4195c2d1f9033fc03,
     type: 3}
 --- !u!114 &259318305
 MonoBehaviour:
@@ -554,8 +554,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 259318304}
-        m_TargetAssemblyTypeName: ControladorTorretas, Assembly-CSharp
-        m_MethodName: ActivarModoColocar
+        m_TargetAssemblyTypeName: TurretController, Assembly-CSharp
+        m_MethodName: ActivatePlacementMode
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1322,7 +1322,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9bfa36e7c0ca4341b43be2207d6cadf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vidaMaxima: 100
+  maxHealth: 100
   healthBarFill: {fileID: 1467262391}
   healthText: {fileID: 1151267439}
 --- !u!65 &567294848
@@ -1714,9 +1714,9 @@ MonoBehaviour:
   - {fileID: 399468493}
   - {fileID: 1020506399}
   - {fileID: 1162076998}
-  velocidad: 0.75
-  velocidadRotacion: 5
-  vida: 100
+  speed: 0.7
+  rotationSpeed: 5
+  health: 100
 --- !u!136 &686938517
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2103,8 +2103,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 2083525475}
-        m_TargetAssemblyTypeName: GestionMejoras, Assembly-CSharp
-        m_MethodName: IntentarMejorarTorreta
+        m_TargetAssemblyTypeName: UpgradeManager, Assembly-CSharp
+        m_MethodName: TryUpgradeTurret
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2700,9 +2700,9 @@ MonoBehaviour:
   - {fileID: 399468493}
   - {fileID: 1020506399}
   - {fileID: 1162076998}
-  velocidad: 0.75
-  velocidadRotacion: 5
-  vida: 200
+  speed: 1
+  rotationSpeed: 5
+  health: 200
 --- !u!1 &1151267437
 GameObject:
   m_ObjectHideFlags: 0
@@ -3007,7 +3007,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1236627764}
-  - component: {fileID: 1236627765}
   - component: {fileID: 1236627766}
   m_Layer: 0
   m_Name: Map
@@ -3033,20 +3032,6 @@ Transform:
   - {fileID: 1855973480}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1236627765
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1236627763}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7be395007a8882c49b3d76e1c485f696, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objetoASupervisar: {fileID: 686938511}
-  intervalo: 0.01
 --- !u!65 &1236627766
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3112,8 +3097,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6320cd40b3db65b49853d6c2fda2e091, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabZombieBase: {fileID: 686938511}
-  prefabZombieNivel2: {fileID: 1084842814}
+  baseZombiePrefab: {fileID: 686938511}
+  level2ZombiePrefab: {fileID: 1084842814}
   waypoints:
   - {fileID: 1253676126}
   - {fileID: 1008542837}
@@ -3125,9 +3110,9 @@ MonoBehaviour:
   - {fileID: 399468493}
   - {fileID: 1020506399}
   - {fileID: 1162076998}
-  intervalo: 5
-  intervaloMinimo: 0.5
-  enemigosPorAumento: 5
+  interval: 3.5
+  minimumInterval: 0.5
+  enemiesPerIncrease: 15
 --- !u!1 &1299985128
 GameObject:
   m_ObjectHideFlags: 0
@@ -3288,6 +3273,16 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2466678910106955528, guid: d9cc48ed07fd7144abd184a013591181,
+        type: 3}
+      propertyPath: firePoint
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2846208505166930721, guid: d9cc48ed07fd7144abd184a013591181,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4609339636147398649, guid: d9cc48ed07fd7144abd184a013591181,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4852,9 +4847,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 481b711cf0bd4ff45b8cca688f07616b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabTorretaNivel2: {fileID: 4609339636147698649, guid: d9cc48ed07fd7144abd184a013591181,
+  turretLevel2Prefab: {fileID: 2846208505166930721, guid: d9cc48ed07fd7144abd184a013591181,
     type: 3}
-  costoMejora: 70
+  upgradeCost: 50
 --- !u!114 &2083525476
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4867,8 +4862,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2a9978c2f1df2047b530f39bbf11c78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  torretaSeleccionada: {fileID: 0}
-  capaTorreta:
+  selectedTurret: {fileID: 0}
+  turretLayer:
     serializedVersion: 2
     m_Bits: 8
 --- !u!4 &2083525477
@@ -5100,6 +5095,12 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2858667412075793947, guid: 0efd57f753632de4195c2d1f9033fc03,
+        type: 3}
+      propertyPath: bulletPrefab
+      value: 
+      objectReference: {fileID: 803161919115116531, guid: 748618dd7103dd5408cc686b971d9828,
+        type: 3}
     - target: {fileID: 3646179969636603389, guid: 0efd57f753632de4195c2d1f9033fc03,
         type: 3}
       propertyPath: m_Controller

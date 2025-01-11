@@ -196,9 +196,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4be3f0fccadcb8d49a854babed7e2c2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabBala: {fileID: 803161919115116531, guid: 748618dd7103dd5408cc686b971d9828,
+  bulletPrefab: {fileID: 803161919115116531, guid: 748618dd7103dd5408cc686b971d9828,
     type: 3}
-  tiempoEntreDisparos: 2
+  fireInterval: 1.5
   canon1: {fileID: 3646179969643805215}
   canon2: {fileID: 3646179969643805209}
 --- !u!1 &3646179969643898425

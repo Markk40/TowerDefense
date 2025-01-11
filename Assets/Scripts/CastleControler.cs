@@ -1,68 +1,58 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-using UnityEngine.SceneManagement; // Para reiniciar o cargar la escena de fin del juego
+using UnityEngine.SceneManagement;
 
-public class Castillo : MonoBehaviour
+public class Castle : MonoBehaviour
 {
-    public int vidaMaxima = 100; // Vida total del castillo
-    private int vidaActual; // Vida actual del castillo
+    public int maxHealth = 100;
+    private int currentHealth;
     public Image healthBarFill;
     public TextMeshProUGUI healthText;
 
     void Start()
     {
-        // Inicializamos la vida del castillo
-        vidaActual = vidaMaxima;
+        currentHealth = maxHealth;
         UpdateHealthBar();
     }
 
     void OnTriggerEnter(Collider other)
     {
-        // Verificamos si el objeto que colisiona es un zombi
         if (other.CompareTag("Enemigo"))
         {
-            // Daño que recibe el castillo
-            int dano = 5; // Ajusta el daño según sea necesario
-
-            // Reducimos la vida del castillo
-            RecibirDanio(dano);
-
-            // Opcional: Destruye al zombi después de causar daño
+            int damage = 5;
+            TakeDamage(damage);
             Destroy(other.gameObject);
         }
     }
 
-    public void RecibirDanio(int cantidad)
+    public void TakeDamage(int amount)
     {
-        vidaActual -= cantidad;
+        currentHealth -= amount;
         UpdateHealthBar();
 
-        // Asegúrate de que la vida no sea negativa
-        if (vidaActual <= 0)
+        if (currentHealth <= 0)
         {
-            vidaActual = 0;
-            FinDelJuego(); // Llama a la función de fin del juego
+            currentHealth = 0;
+            EndGame();
         }
-
     }
+
     void UpdateHealthBar()
     {
         if (healthBarFill != null)
         {
-            healthBarFill.fillAmount = (float)vidaActual / vidaMaxima; ;
+            healthBarFill.fillAmount = (float)currentHealth / maxHealth;
         }
         if (healthText != null)
         {
-            healthText.text = $"{vidaActual} / {vidaMaxima}";
+            healthText.text = $"{currentHealth} / {maxHealth}";
         }
     }
 
-    void FinDelJuego()
+    void EndGame()
     {
-        Debug.Log("¡El castillo ha caído! Fin del juego.");
-
-        // Puedes cargar una escena de "Game Over"
+        Debug.Log("The castle has fallen! Game over.");
         SceneManager.LoadScene("GameOverScene");
     }
 }

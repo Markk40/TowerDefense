@@ -1,6 +1,5 @@
 using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class ScoreUI : MonoBehaviour
 {
@@ -8,22 +7,23 @@ public class ScoreUI : MonoBehaviour
 
     void Start()
     {
-        // Subscribirse al evento del ScoreManager
+        // Subscribe to the ScoreManager event
         ScoreManager.Instance.OnScoreChanged += UpdateScoreText;
 
-        // Inicializar texto
+        // Initialize text
         UpdateScoreText(ScoreManager.Instance.GetPoints());
     }
 
     void OnDestroy()
     {
-        // Desuscribirse del evento cuando el objeto sea destruido
+        // Unsubscribe from the event when the object is destroyed
         ScoreManager.Instance.OnScoreChanged -= UpdateScoreText;
     }
 
-    void UpdateScoreText(int puntos)
+    void UpdateScoreText(int points)
     {
-        scoreText.text = "Points: " + puntos;
+        scoreText.text = "Points: " + points;
     }
 }
+
 

@@ -1,18 +1,20 @@
 using UnityEngine;
 
-public class Torreta2 : TorretaBase
+public class TurretLevel2 : TurretBase
 {
-    public Transform puntoDisparo; // Posición desde donde dispara la torreta
+    public Transform firePoint; // Posición desde donde dispara la torreta
 
     private void Start()
     {
-        NivelTorreta = 2;
+        TurretLevel = 2;
     }
-    protected override void Disparar(Transform objetivo)
+
+    protected override void Fire(Transform target)
     {
-        Vector3 direccion = (objetivo.position - transform.position).normalized;
+        Vector3 direction = (target.position - transform.position).normalized;
 
         // Disparar desde un único punto
-        Instantiate(prefabBala, puntoDisparo.position, Quaternion.LookRotation(direccion));
+        Instantiate(bulletPrefab, firePoint.position, Quaternion.LookRotation(direction));
     }
 }
+
